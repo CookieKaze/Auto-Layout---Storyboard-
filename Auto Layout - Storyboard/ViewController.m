@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIView *yellowBox;
 
 @end
 
@@ -16,12 +17,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)yellowButton:(UIButton *)sender {
+    if (self.yellowBox.hidden == NO) {
+        self.yellowBox.hidden = YES;
+//        CGRect aFrame = self.view.frame;
+//        aFrame.size.height -=175;
+//        self.view.frame = aFrame;
+        
+    }else{
+        self.yellowBox.hidden = NO;        
+
+    }
 }
 
 @end
